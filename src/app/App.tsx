@@ -8,7 +8,6 @@ import MenuNavigation from './components/navbar/MenuNavigation';
 import { RootRouter } from './routes';
 
 function App() {
-  console.log(window.ipcRenderer);
 
   const [isOpen, setOpen] = useState(false);
   const [isSent, setSent] = useState(false);
@@ -26,17 +25,7 @@ function App() {
 
   return (
     <Provider store={store}>
-      <div className="flex flex-col h-screen">
-        {window.Main && (
-          <div className="flex-none">
-            <AppBar />
-          </div>
-        )}
-        {/* <MenuNavigation/>
-        <EmployeeTurnScreen /> */}
-
-        <RootRouter />
-      </div>
+      <RootRouter />
     </Provider>
   );
 }

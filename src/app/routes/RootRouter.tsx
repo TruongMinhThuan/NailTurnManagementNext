@@ -16,7 +16,7 @@ const RootRouter = (props: Props) => {
     return (
         <Router>
 
-            <div>
+            <div style={{backgroundColor:'white'}}>
                 <MenuNavigation />
                 <Routes>
                     <Route path="/home-screen" Component={HomeScreen} />
