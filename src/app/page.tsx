@@ -6,20 +6,20 @@ import { RootRouter } from './routes'
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 import { EmployeeManagementScreen } from './screens/employee-management';
+import MenuNavigation from './components/navbar/MenuNavigation';
+import ManagementMenu from './components/navbar/ManagementMenu';
 
 export default function Home() {
 
-  // return (
-  //   <Provider store={store}>
-  //     <RootRouter />
-  //   </Provider >
-  // )
-
   return (
     <Provider store={store}>
-      <main className={styles.main}>
-        <EmployeeManagementScreen/>
-      </main>
+      <div>
+        <MenuNavigation/>
+        {/* <main className={styles.main}> */}
+        <EmployeeManagementScreen />
+        {/* </main> */}
+
+      </div>
     </Provider>
 
   )

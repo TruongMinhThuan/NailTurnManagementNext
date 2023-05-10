@@ -2,27 +2,27 @@
 
 import { AppstoreOutlined, HomeOutlined, MailOutlined, SettingOutlined, SnippetsOutlined, TeamOutlined } from '@ant-design/icons';
 import { Menu, MenuProps } from 'antd'
+import Link from 'next/link';
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
 
 type Props = {}
 
 const items: MenuProps['items'] = [
-    // {
-    //     label: (<Link to={'/home-screen'}>Home</Link>),
-    //     key: 'home',
-    //     icon: <HomeOutlined />,
-    // },
     {
-        label: (<Link to={'/employee-management-screen'}>Employee Management</Link>),
+        label: (<Link href="/dashboard">Dashboard</Link>),
+        key: 'home',
+        icon: <HomeOutlined />,
+    },
+    {
+        label: (<Link href="/employee">Employee</Link>),
         key: 'app',
         icon: <TeamOutlined />,
     },
-    {
-        // label: (<Link to={'/employee-turn-screen'}>Turns</Link>),
-        label: (<Link to={'/turn-calendar-screen'}>Calender's Turns</Link>),
-        key: 'alipay',
-    },
+    // {
+    //     // label: (<Link to={'/employee-turn-screen'}>Turns</Link>),
+    //     label: (<Link to={'/turn-calendar-screen'}>Calender's Turns</Link>),
+    //     key: 'alipay',
+    // },
     // {
     //     label: 'Statistic',
     //     key: 'SubMenu',
